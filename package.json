@@ -1,0 +1,17 @@
+{
+  "name": "mealkakaobot",
+  "version": "0.0.1",
+  "description": "카카오톡 플러스친구 급식봇",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "박찬솔",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "neis": "^0.3.1",
+    "body-parser": "^1.19.0"
+  }
+}
