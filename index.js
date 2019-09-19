@@ -47,32 +47,9 @@ app.post('/skill/meal', async (req, res) => {
 			output.push(Object.assign({
 					"title": `${day.getMonth() + 1}월 ${day.getDate()}일  ${meal_type[i]}`,
 					"description": clean_meal_detail(neis.removeAllergy(meal.lunch))
-				},
-				(i === 1 ? {
-					"buttons": [
-						{
-							"action": "webLink",
-							"webLinkUrl": "https://t.me/school_kr_bot",
-							"label": "텔레그램"
-						}
-					]
-				} : {})
+				}
 			));
 		}
-	}
-	
-	if (!output.length) {
-		output = [{
-			"title": `${day.getMonth() + 1}월 ${day.getDate()}일  급식 정보`,
-			"description": "이 날의 급식이 없습니다.",
-			"buttons": [
-				{
-					"action": "webLink",
-					"webLinkUrl": "https://t.me/school_kr_bot",
-					"label": "텔레그램"
-				}
-			]
-		}];
 	}
 	
 	const responseBody = {
